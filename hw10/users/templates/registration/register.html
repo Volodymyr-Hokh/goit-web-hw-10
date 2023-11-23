@@ -14,19 +14,27 @@
                         <div class="form-group d-flex flex-column align-items-center justify-content-center">
                             <label for="{{ form.username.id_for_label }}">Username:</label>
                             {{ form.username }}
+                            <span>{{ form.errors.username }}</span>
+                        </div>
+                        <div class="form-group d-flex flex-column align-items-center justify-content-center">
+                            <label for="{{ form.username.id_for_label }}">Email:</label>
+                            {{ form.email }}
+                            <span>{{ form.errors.email }}</span>
                         </div>
                         <div class="form-group my-3 d-flex flex-column align-items-center justify-content-center">
                             <label for="{{ form.password.id_for_label }}">Password:</label>
                             {{ form.password1 }}
+                            <span>{{ form.errors.password1 }}</span>
                         </div>
                         <div class="form-group my-3 d-flex flex-column align-items-center justify-content-center">
                             <label for="{{ form.password2.id_for_label }}">Confirm password:</label>
                             {{ form.password2 }}
+                            <span>{{ form.errors.password2 }}</span>
                         </div>
                         <div class="text-center my-3">
                             <button type="submit" class="btn btn-primary">Register</button>
                         </div>
-                        <input type="hidden" name="next" value="{% url 'quotes:index' %}"/>
+                        <input type="hidden" name="next" value="{% url 'quotes:index' %}" />
                     </form>
                 </div>
             </div>
